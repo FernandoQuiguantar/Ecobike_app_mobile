@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity" >
+
+    <SearchView
+        android:id="@+id/search"
+        android:layout_width="322dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="32dp"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="0.494"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/footer"
+        android:layout_width="411dp"
+        android:layout_height="201dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="528dp">
+
+        <TextView
+            android:id="@+id/txt2_estacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Estación la Carolina"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintHorizontal_bias="0.068"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt2_direccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Av.Naciones Unidas y Amazonas"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintHorizontal_bias="0.077"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toBottomOf="@+id/txt2_estacion" />
+
+        <Button
+            android:id="@+id/btn_reservar"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#2552D9"
+            android:text="Reservar"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintHorizontal_bias="0.496"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toBottomOf="@+id/txt2_direccion"
+            map:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="69dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/bici"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintHorizontal_bias="0.178"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toBottomOf="@+id/txt2_direccion" />
+
+        <TextView
+            android:id="@+id/txt3_stock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:text="12"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            map:layout_constraintEnd_toStartOf="@+id/imageView7"
+            map:layout_constraintHorizontal_bias="0.068"
+            map:layout_constraintStart_toEndOf="@+id/imageView6"
+            map:layout_constraintTop_toBottomOf="@+id/txt2_direccion" />
+
+        <TextView
+            android:id="@+id/txt3_stock2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="24dp"
+            android:text="3 min"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            map:layout_constraintBottom_toTopOf="@+id/btn_reservar"
+            map:layout_constraintStart_toEndOf="@+id/imageView7" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="65dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/reloj"
+            map:layout_constraintBottom_toTopOf="@+id/btn_reservar"
+            tools:layout_editor_absoluteX="190dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
