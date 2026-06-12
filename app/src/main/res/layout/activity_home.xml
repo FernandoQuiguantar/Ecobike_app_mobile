@@ -2,27 +2,34 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity" >
+    android:background="#B9DCF8"
+    tools:context=".HomeActivity">
 
     <SearchView
         android:id="@+id/search"
-        android:layout_width="322dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="266dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        android:background="#E6E1E1"
         map:layout_constraintEnd_toEndOf="parent"
-        map:layout_constraintHorizontal_bias="0.494"
+        map:layout_constraintHorizontal_bias="0.496"
         map:layout_constraintStart_toStartOf="parent"
         map:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/footer"
-        android:layout_width="411dp"
+        android:layout_width="match_parent"
         android:layout_height="201dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="528dp">
+        android:background="#FAF8F8"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="0.0"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/imageView3"
+        map:layout_constraintVertical_bias="1.0">
 
         <TextView
             android:id="@+id/txt2_estacion"
@@ -42,7 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Av.Naciones Unidas y Amazonas"
+            android:text="Av.Naciones Unidas y Japón"
             map:layout_constraintEnd_toEndOf="parent"
             map:layout_constraintHorizontal_bias="0.077"
             map:layout_constraintStart_toStartOf="parent"
@@ -106,8 +113,31 @@
             android:layout_marginBottom="20dp"
             android:src="@drawable/reloj"
             map:layout_constraintBottom_toTopOf="@+id/btn_reservar"
-            tools:layout_editor_absoluteX="190dp" />
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="459dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/parada"
+        map:layout_constraintTop_toBottomOf="@+id/search"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:id="@+id/btn_salir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toStartOf="@+id/search"
+        map:layout_constraintHorizontal_bias="0.4"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent"
+        map:layout_constraintVertical_bias="0.022"
+        map:srcCompat="@android:drawable/ic_delete" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
